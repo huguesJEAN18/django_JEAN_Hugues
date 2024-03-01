@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Mes réservations</h2>
+<ul>
+    {% for reservation in reservations %}
+    <li>{{ reservation.vol }} - {{ reservation.date_reservation }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

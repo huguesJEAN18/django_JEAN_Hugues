@@ -1,0 +1,75 @@
+/* Styles for the navbar */
+.navbar {
+    background-color: #1877f2; /* Bleu Facebook */
+    color: #ffffff;
+    padding: 30px 0;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.navbar-logo {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar-logo:hover {
+    text-decoration: underline;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-nav li {
+    margin-right: 20px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+.card-container {
+    display: grid;
+    gap: 50px 100px;
+    padding: 20px;
+}
+
+.card {
+    grid-row: 1 / span 2;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card-content {
+    margin-bottom: 10px;
+}
+
+
+

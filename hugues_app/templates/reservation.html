@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réserver Vol</title>
+</head>
+<body>
+    <ul class="navbar-nav">
+        <!-- Autres liens du navbar -->
+        <li><a href="{% url 'toutes_reservations' %}" class="nav-link">Toutes les réservations</a></li>
+    </ul>
+    
+    <h1>Réserver Vol</h1>
+    <p>Vol pour {{ vol.destination }} le {{ vol.date_depart|date:"d M Y" }}.</p>
+    <!-- Ajoutez ici un formulaire de réservation -->
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annonces Example</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles_dash.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#" class="navbar-logo">Hgs APP</a>
+            </div>
+            <ul class="navbar-nav">
+                <li><a href="#" class="nav-link">Accueil</a></li>
+                <li><a href="#" class="nav-link">Rechercher</a></li>
+                <li><a href="#" class="nav-link">Réservations</a></li>
+                <li><a href="#" class="nav-link">Mon compte</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="card-container">
+        <!-- Itérer sur chaque vol et afficher ses détails dans une carte -->
+        {% for vol in vols %}
+        <div class="card">
+            <div class="card-image">
+                <!-- Assurez-vous que l'image existe dans votre dossier static -->
+            </div>
+            <div class="card-content">
+                <h2>{{ vol.destination }}</h2>
+                <p>Départ de {{ vol.origine }} le {{ vol.date_depart|date:"d M Y" }}</p>
+                <p>Prix: {{ vol.prix }}</p>
+                <a href="{% url 'reserver_vol' vol.id %}" class="btn-reserver">Réserver</a>
+            </div>            
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
